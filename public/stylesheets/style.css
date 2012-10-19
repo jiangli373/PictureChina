@@ -1,0 +1,48 @@
+body {
+    width: 1024px;
+    margin: auto;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#columns-parent {
+    top: -190px;
+    margin: 0px auto;
+    position: absolute;
+    height: 270px;
+    width: 1024px;
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.5s ease-out;
+}
+
+#columns-child {
+    margin: 0px auto;
+    position: absolute;
+    height: 190px;
+}
+
+#columns-bar {
+    z-index: 10;
+    position: absolute;
+    left: 15px;
+    bottom: 0px;
+}
+#columns-img-bar{
+
+}
+.top_list {
+    float: left;
+}
+.top_img{
+    height: 150px;
+}
+.top_list img{
+    margin: 0px auto;
+    height: 150px;
+    width: 150px;
+}
+.top_title{
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+}
