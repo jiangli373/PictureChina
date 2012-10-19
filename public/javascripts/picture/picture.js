@@ -41,7 +41,7 @@ $(picture).init();
             var view = this;
             var template = Handlebars.compile($('#top_bar_template').html());
             $(template()).appendTo(view.$el);
-            var top_child = new picture.TopChild;
+            var top_child = new picture.columns_child;
             top_child.render().$el.appendTo(view.$el);
 
             return this;
@@ -62,8 +62,8 @@ $(picture).init();
                 });
                 picture.top_bar_flag = true;
             }
-
         }
     });
+//    picture.
 })
     (picture);
