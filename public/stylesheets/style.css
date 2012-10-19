@@ -27,21 +27,26 @@ body {
     left: 15px;
     bottom: 0px;
 }
-#columns-img-bar{
+
+#columns-img-bar {
 
 }
+
 .top_list {
     float: left;
 }
-.top_img{
+
+.top_img {
     height: 150px;
 }
-.top_list img{
+
+.top_list img {
     margin: 0px auto;
     height: 150px;
     width: 150px;
 }
-.top_title{
+
+.top_title {
     height: 30px;
     text-align: center;
     font-size: 16px;
