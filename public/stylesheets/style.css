@@ -1,9 +1,17 @@
 body {
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none; /* disable cut copy paste */
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    margin: 0;
     width: 1024px;
-    margin: auto;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 768px;
 }
-
+ #app{
+     background: url(../images/mainbackground.jpeg);
+     width: 1024px;
+     height: 768px;
+ }
 #columns-parent {
     top: -190px;
     margin: 0px auto;
@@ -13,27 +21,30 @@ body {
     overflow: hidden;
     -webkit-transform-style: preserve-3d;
     -webkit-transition: -webkit-transform 0.5s ease-out;
+   -webkit-transform:translateZ(10px);
 }
 
 #columns-child {
     margin: 0px auto;
     position: absolute;
     height: 190px;
+    -webkit-transform:translateZ(10px);
 }
 
 #columns-bar {
-    z-index: 10;
+    -webkit-transform:translateZ(10px);
     position: absolute;
     left: 15px;
     bottom: 0px;
 }
 
-#columns-img-bar {
+.columns-img-bar {
 
 }
 
 .top_list {
     float: left;
+    -webkit-transform:translateZ(10px);
 }
 
 .top_img {
@@ -50,4 +61,61 @@ body {
     height: 30px;
     text-align: center;
     font-size: 16px;
+}
+
+#content {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 1024px;
+    height: 668px;
+    background:transparent;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    overflow-y: auto;
+    -webkit-transform-style: preserve-3d;
+    -webkit-overflow-scrolling: touch;
+}
+#innerContent {
+    -webkit-backface-visibility: hidden;
+    height: 600px;
+}
+article {
+    height: 600px;
+    width: 1024px;
+    font-size: 1.5em;
+    -webkit-transform-style: preserve-3d;
+    float: left;
+}
+.overplay{
+    position: absolute;
+    height: 600px;
+    width: 1024px;
+    font-size: 1.5em;
+    -webkit-transform-style: preserve-3d;
+    float: left;
+    background-color: rgba(255,255,255,0.5);
+}
+.imgdiv{
+    position: absolute;
+    width: 206px;
+    height: 180px;
+    overflow: hidden;
+    /*margin: 20px;*/
+}
+.innerimg{
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-origin: 0 0;
+}
+
+.list_item{
+    display: inline-block;
+    width: 200px;
+    height: 180px;
+    margin: -20px -5px 20px 0;
+    padding: 0 20px 40px 9px;
+    vertical-align: top;
 }

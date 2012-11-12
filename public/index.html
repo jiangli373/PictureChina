@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>picturechina</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="user-scalable=no, width=device-width"/>
+    <title>picturechina</title>
     <script src='javascripts/jquery/jquery-1.8.1.min.js'></script>
     <script src="javascripts/underscore/underscore-min.js"></script>
     <script src="javascripts/backbone/backbone-min.js"></script>
@@ -20,17 +20,22 @@
         </div>
     </script>
     <script id="top_bar_template" type="text/x-handlebars-template">
-        <div id="columns-bar">
-            <img id="columns-img-bar" src="images/bar.png">
-        </div>
+            <img class="columns-img-bar" src="images/bar.png">
+    </script>
+    <script id="innner_img_template" type="text/x-handlebars-template">
+        <img class="innerimg" src="images/p2.jpg">
     </script>
 </head>
 <body>
 <div id="app"></div>
 <script>
     $(document).ready(function () {
-        var top = new picture.columns_parent;
-        $("#app").append(top.render().el);
+        var top = new picture.columns_parent_view;
+        top.render().$el.appendTo('#app');
+
+        var pageControlView = new picture.PageControlView;
+        pageControlView.render().$el.appendTo("#app");
+
     });
 </script>
 </body>
